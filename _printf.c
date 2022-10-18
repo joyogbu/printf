@@ -1,8 +1,6 @@
 #include "main.h"
-#include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>
-#include <stdlib.h>
 
 /**
  * get_format - get the type of the format specifier if present
@@ -15,6 +13,8 @@ int (*get_format(const char *format))(va_list)
 	for_mat formats[] = {
 		{"s", _print_s},
 		{"c", _print_c},
+		{"b", _print_b},
+		{"p", _print_p},
 		{NULL, NULL}
 	};
 
@@ -38,9 +38,9 @@ int _printf(const char *format, ...)
 {
 	va_list fm;
 	int (*f)(va_list);
-
 	unsigned int i = 0;
 	int counter = 0;
+
 	if (format == NULL)
 		return (-1);
 	va_start(fm, format);
@@ -66,9 +66,7 @@ int _printf(const char *format, ...)
 			{
 				f = get_format(&format[i + 1]);
 				if (f == NULL)
-				{
 					return (-1);
-				}
 				i += 2;
 				counter += f(fm);
 				continue;
