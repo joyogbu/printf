@@ -22,5 +22,6 @@ int _print_s(va_list s);
 int _print_i(va_list i);
 int _print_d(va_list d);
 int _print_b(va_list b);
+int _print_p(va_list p);
 
 #endif
