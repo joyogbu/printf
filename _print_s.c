@@ -9,10 +9,10 @@
  */
 int _print_s(va_list s)
 {
+	char *str = va_arg(s, char *);
 	int i;
 
 	i = 0;
-	char *str = va_arg(s, char *);
 
 	while (str[i] != '\0')
 	{

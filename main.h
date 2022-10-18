@@ -11,11 +11,15 @@
  */
 typedef struct form
 {
-	char *for;
+	char *fo;
 	int (*f)(va_list);
 } for_mat;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int _print_c(va_list c);
+int _print_s(va_list s);
+int _print_i(va_list i);
+int _print_d(va_list d);
 
 #endif
