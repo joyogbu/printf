@@ -14,8 +14,7 @@ int _print_s(va_list s)
 
 	i = 0;
 
-	l
-		if (str == NULL)
+	if (str == NULL)
 			str = "(null)";
 		while (str[i])
 	{
