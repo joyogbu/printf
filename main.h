@@ -6,7 +6,7 @@
 
 /**
  * struct form - syructure for defining format specifier to print output
- * @for: format type
+ * @fo: format type
  * @f: function to print
  */
 typedef struct form
@@ -21,5 +21,6 @@ int _print_c(va_list c);
 int _print_s(va_list s);
 int _print_i(va_list i);
 int _print_d(va_list d);
+int _print_b(va_list b);
 
 #endif

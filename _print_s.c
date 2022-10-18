@@ -14,7 +14,10 @@ int _print_s(va_list s)
 
 	i = 0;
 
-	while (str[i] != '\0')
+	l
+		if (str == NULL)
+			str = "(null)";
+		while (str[i])
 	{
 		_putchar(str[i]);
 		i++;
