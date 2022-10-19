@@ -20,8 +20,7 @@ int _print_s(va_list s)
 	}
 	while (str[i] != '\0')
 	{
-		_putchar(str[i]);
-		i++;
+		_putchar(str[i++]);
 	}
 	return (i);
 }
